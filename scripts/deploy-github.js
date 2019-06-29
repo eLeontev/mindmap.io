@@ -4,8 +4,8 @@ const ghpages = require('gh-pages')
 ghpages.publish(
   'public',
   {
-    branch: 'master',
-    repo: 'https://github.com/eLeontev/mind-map.git',
+    branch: 'gh-pages',
+    repo: 'https://github.com/eLeontev/mindmap.github.io.git',
   },
   () => {
     console.log('Deploy Complete!')
