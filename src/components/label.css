@@ -1,0 +1,36 @@
+.label {
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.labels {
+    position: relative;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 10px;
+    max-width: 270px;
+}
+
+.labels_has_children:after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    margin-left: -1px;
+    bottom: -11px;
+    width: 0;
+    height: 10px;
+    border-left: 1px solid #bec1c3;
+}
+
+.labels:before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    margin-left: -1px;
+    top: -11px;
+    width: 0px;
+    height: 10px;
+    border-left: 1px solid #bec1c3;
+}
