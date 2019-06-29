@@ -5,7 +5,7 @@ ghpages.publish(
   'public',
   {
     branch: 'gh-pages',
-    repo: 'https://github.com/eLeontev/mindmap.github.io.git',
+    repo: 'https://github.com/eLeontev/mindmap.io.git',
   },
   () => {
     console.log('Deploy Complete!')
