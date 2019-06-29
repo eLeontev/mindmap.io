@@ -5,7 +5,7 @@ ghpages.publish(
   'public',
   {
     branch: 'master',
-    repo: 'https://github.com/eLeontev/gatsby_mind-map.github.io.git',
+    repo: 'https://github.com/eLeontev/mind-map.git',
   },
   () => {
     console.log('Deploy Complete!')
