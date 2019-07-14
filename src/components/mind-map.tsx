@@ -119,7 +119,7 @@ export class MindMap extends Component<any, any> {
                 block.id === id
                     ? {
                           ...block,
-                          value,
+                          value: value.trim(),
                       }
                     : block
         );
