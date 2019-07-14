@@ -20,9 +20,10 @@ export class TextArea extends Component<TextAreaProps, any> {
     }
 
     onEnterUpdate = (event: KeyboardEvent): void => {
-        let { id, value, closeLabel }: TextAreaProps = this.props;
+        let { id, value, closeLabel, updateLabel }: TextAreaProps = this.props;
 
         if (event.which === ENTER_KEY_CODE && value.trim()) {
+            updateLabel(id, value.trim());
             closeLabel(id);
         }
     };
@@ -41,11 +42,13 @@ export class TextArea extends Component<TextAreaProps, any> {
             ? 'editable-block'
             : 'editable-block editable-block_hidden';
 
+
+            const trimedValue: string = value.trim();
         return (
             <textarea
                 placeholder={PLACEHOLDER}
                 ref={(textarea) => (this.textarea = textarea)}
-                value={value}
+                value={ trimedValue ? value : '' }
                 className={className}
                 onKeyDown={preventFocus}
                 onKeyPress={onEnterUpdate}
