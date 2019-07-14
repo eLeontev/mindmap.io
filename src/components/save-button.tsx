@@ -1,3 +1,6 @@
 import React from 'react'
 
-export const SaveButton = ({ exportMap }: any) => <button onClick={exportMap}>export to JSON</button>
+interface SaveButtonProps {
+    exportMap: () => void;
+}
+export const SaveButton = ({ exportMap }: SaveButtonProps) => <button onClick={exportMap}>export to JSON</button>
